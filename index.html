@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de Investimentos - BR.">
+    <meta name="keywords" content="calculadora, investimentos, brasil, portugues, gratuita">
+    <meta name="author" content="Chromatec">
+    <title>Calculadora de Investimentos</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="styles.css"> <meta property="og:title" content="Page Title">
+    <meta property="og:description" content="Calculadora de Investimentos simples e gratuita para brasileiros.">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <!-- <meta property="og:image" content="path/to/social-media-image.jpg"> -->
+    <!-- <meta property="og:url" content="https://www.yourwebsite.com/page-url"> -->
+    <!-- <meta name="robots" content="index, follow"> </head> -->
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <!-- <li><a href="/about">About</a></li> -->
+                <!-- <li><a href="/contact">Contact</a></li> -->
+            </ul>
+        </nav>
+        <h1>Calculadora</h1>
+    </header>
+
+    <main>
+        <section id="app">
+            <h2>Taxa equivalente</h2>
+            <label for="taxa">Taxa (em percentual):</label>
+            <input id="taxa" placeholder="Digite aqui o valor da taxa" type="number" v-model="taxa"/>
+
+            <label for="t">Prazo que eu Tenho (ao ano):</label>
+            <input id="t" placeholder="Digite aqui o prazo que você tem" type="number" v-model="t"/><span> % ao ano</span>
+
+            <label for="q">Prazo que eu Quero (em meses):</label>
+            <input id="q" placeholder="Digite aqui o prazo desejado" type="number" v-model="q"/><span> % ao mês</span>
+            <br />
+
+            <button v-on:click="calcularTaxaEquivalente" title="Calcular">Calcular</button>
+
+            <label for="resultado">Resultado:</label>
+            <span>%</span><input id="resultado" type="text" readonly v-model="resultado"/>
+            <!-- <article>
+                <h3>Article Heading</h3>
+                <p>Content within the article.</p>
+            </article> -->
+        </section>
+
+        <!-- <aside>
+            <h3>Related Content</h3>
+            <p>Supplementary information.</p>
+        </aside> -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chromatec. No rights reserved.</p>
+        <!-- <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a> -->
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
